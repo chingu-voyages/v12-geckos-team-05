@@ -28,7 +28,59 @@
     <nav id="nav"></nav>
   </header>
   <main class="container">
-    <section id="budget-planner" class="grid-item">Budget Planner</section>
+    <section id="budget-planner" class="grid-item">
+
+      <section id="output-section">
+        <div>
+          <div>Target Daily Expense: 
+            <div id="target-expense">$</div>
+          </div>
+          <div>Average Daily Expenses: 
+            <div id="average-expense">$</div>
+          </div>    
+        </div>
+        <canvas id="canvas"></canvas>
+      </section>
+ 
+      <section id="input-section">
+          <div class="inputs">
+            <pre>variable expenses: <input type="number" id="variable-expense">$</pre>
+            <pre>fixed expenses: <input list="fixed-expenses" id="fixed-expenses-list"><input type="number" id="fixed-input">$</pre>
+          </div>
+          <div class="incomes">income: <input type="number" id="income">$</div>
+        <datalist id="fixed-expenses">
+            <option value="housing payment">
+            <option value="emergency fund">
+            <option value="transportation expenses">
+            <option value="food">
+            <option value="entertainment expenses">
+            <option value="clothes and accessories">
+        </datalist>
+      </section>
+
+      <section id="preferences-section">
+          <ul>
+            <li><input type="radio" name="budget-rule" id="budget-rule"> Budget Rule (50/20/30)</li>
+            <li><input type="radio" name="single-target" id="single-target"> Single Target
+              <ul class="target invisible">
+                  <li><input type="radio" name="expenses" id="expenses"> Target Expenses</li>
+                  <li><input type="radio" name="services" id="services"> Target Services</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="inputs">Minimum and Maximum treshold daily expenses
+              <pre>Min: <input type="number" name="min-treshold" id="min-treshold">$   Max: <input type="number" name="max-treshold" id="max-treshold">$</pre>
+          </div>
+          <span>Period: <input id="period" list="period-list"></span>
+          <datalist id="period-list">
+            <option value="daily">
+            <option value="weekly">
+            <option value="monthly">
+            <option value="yearly">
+          </datalist>
+        </section>
+
+    </section>
     <section id="calendar" class="grid-item">Calendar</section>
     <section id="clock" class="grid-item">Clock</section>
     <section id="notifications" class="grid-item">Notifications</section>

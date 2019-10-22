@@ -189,6 +189,17 @@ textarea {
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: "clock budget-planner calendar" "clock budget-planner notifications";
+    grid-gap: 2em;
+    margin: auto;
+    width: 90%;
+    height: 90vh;
+  }
 }
 
 @media print,
@@ -288,6 +299,12 @@ textarea {
 }
 #budget-planner {
   grid-area: budget-planner;
+  min-width: max-content;
+  overflow: auto;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1.5fr; 
+  grid-template-areas: "output" "input" "preferences";
+  border: 2px solid black;
 }
 #calendar {
   grid-area: calendar;
@@ -305,5 +322,82 @@ textarea {
   height: 3vh;
   border: 2px solid #A9A9A9;
 }
+input[type="number"] {
+  width: 20%;
+}
+#fixed-expenses-list {
+  width: 40%;
+}
+#preferences-section, #input-section, #output-section {
+  padding: 1em;
+  border-bottom: .5px solid #A9A9A9;
+  
+}
+#output-section {
+  grid-area: output;
+}
+#input-section {
+  grid-area: input;
+}
+#preferences-section {
+  grid-area: preferences;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.target {
+  padding-left: 2em;
+}
+
+#input-section ul {
+  padding: 0;
+}
+pre, .incomes {
+  margin: .5em;
+}
+#canvas {
+  width: 50%;
+  height: 100%;
+  border: .2px solid black;
+}
+#output-section > div {
+  float: left;
+  margin-right: 5em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
