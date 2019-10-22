@@ -44,10 +44,10 @@
  
       <section id="input-section">
           <div class="inputs">
-            <pre>variable expenses: <input type="number" id="variable-expense">$</pre>
-            <pre>fixed expenses: <input list="fixed-expenses" id="fixed-expenses-list"><input type="number" id="fixed-input">$</pre>
+            <pre>Variable Expenses: <input type="number" id="variable-expense">$</pre>
+            <pre>Fixed Expenses: <input list="fixed-expenses" id="fixed-expenses-list"><input type="number" id="fixed-input">$</pre>
           </div>
-          <div class="incomes">income: <input type="number" id="income">$</div>
+          <div class="incomes">Income: <input type="number" id="income">$</div>
         <datalist id="fixed-expenses">
             <option value="housing payment">
             <option value="emergency fund">
@@ -59,12 +59,12 @@
       </section>
 
       <section id="preferences-section">
-          <ul>
-            <li><input type="radio" name="budget-rule" id="budget-rule"> Budget Rule (50/20/30)</li>
-            <li><input type="radio" name="single-target" id="single-target"> Single Target
+          <ul id="rule">
+            <li><input type="radio" name="rule1" id="budget-rule" checked> Budget Rule (50/20/30)</li>
+            <li><input type="radio" name="rule1" id="single-target"> Single Target
               <ul class="target invisible">
-                  <li><input type="radio" name="expenses" id="expenses"> Target Expenses</li>
-                  <li><input type="radio" name="services" id="services"> Target Services</li>
+                  <li><input type="radio" name="rule2" id="expenses" checked> Target Expenses</li>
+                  <li><input type="radio" name="rule2" id="savings"> Target Savings</li>
               </ul>
             </li>
           </ul>
